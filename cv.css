@@ -334,59 +334,6 @@ body {
     overflow-wrap: break-word;
 }
 
-.references .item {
-    text-align: left;
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed var(--border-color);
-    box-sizing: border-box;
-    padding: 0 15px 15px 15px;
-    overflow-wrap: break-word;
-}
-.references .item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-.references .item h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 1em;
-    overflow-wrap: break-word;
-}
-.references .item .position {
-    font-size: 0.9em;
-    color: var(--light-text-color);
-    margin-bottom: 5px;
-    overflow-wrap: break-word;
-}
-.references .item .contact-ref {
-    font-size: 0.85em;
-    color: var(--light-text-color);
-    margin-bottom: 3px;
-    overflow-wrap: break-word;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
-    flex-wrap: wrap;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-.social-links a {
-    color: var(--accent-color-2);
-    font-size: 1.8em;
-    transition: color var(--transition-speed), transform var(--transition-speed);
-}
-
-.social-links a:hover {
-    color: var(--accent-color-1);
-    transform: scale(1.1);
-}
-
 .cv-content {
     flex: 1;
     padding: 30px;
@@ -661,30 +608,32 @@ body {
     justify-content: center;
 }
 
-.modal.active {
-    display: flex !important;
+.external-link-container {
+    margin-top: 20px;
+    text-align: left;
 }
 
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 700px;
-    position: relative;
+.cv-external-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color, #4caf4fdb);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
 }
 
-.close {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 30px;
-    cursor: pointer;
+.cv-external-btn:hover {
+    background-color: transparent;
+    color: var(--primary-color, #2c3e50);
+    border-color: var(--primary-color, #2c3e50);
 }
 
-body.modal-open {
-    overflow: hidden;
-    padding-right: 0px;
+.cv-external-btn i {
+    margin-right: 8px;
 }
 
 .github-btn {
@@ -774,15 +723,15 @@ body.modal-open {
 }
 
 .single-qr-container img {
-    width: 60%;
-    height: 60%;
+    width: 40%;
+    height: 40%;
     border: 2px solid var(--accent-color-1);
     padding: 10px;
     border-radius: 10px;
 }
 
 .qr-hint {
-    margin-top: 10px;
+    margin-top: 5px;
     font-size: 0.5rem;
     color: #333;
     font-weight: 600;
@@ -794,6 +743,15 @@ body.modal-open {
     {
         padding: 10px 20px; border-radius: 20px; cursor: pointer; background: var(--accent-color-1); color: white; border: none;
     }
+
+body:has(#btn-en:not([style*="display: none"])) .cover-letter-extended p {
+    font-size: 1rem; 
+    line-height: 1.4;
+}
+body:has(#btn-tr:not([style*="display: none"])) .cover-letter-extended p {
+    font-size: 1rem; 
+    line-height: 1.4;
+}
 
 .cv-sidebar section {
     margin-bottom: 20px;
@@ -811,7 +769,7 @@ body.modal-open {
 }
 
 .single-qr-container img {
-    width: 100% !important;
+    width: 80% !important;
     height: auto;
     border: 2px solid var(--accent-color-1);
     padding: 5px;
