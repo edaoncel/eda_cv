@@ -100,7 +100,7 @@ function downloadCV() {
 
 const opt = {
     margin: 0,
-    filename: 'Eda_Oncel_ÖNYAZI.pdf',
+    filename: 'Eda_Oncel_CV.pdf',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { 
         scale: 2, 
